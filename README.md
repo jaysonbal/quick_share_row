@@ -10,6 +10,12 @@ screens: the per-channel URL schemes (`wa.me`, `sms:`, Facebook's
 `sharer.php`, `mailto:`) and the little colored, tooltip-labeled icon
 button, without anything specific to that original app baked in.
 
+<p align="center">
+  <img src="assets/screenshot-row.png" alt="ShareButtonsRow shown inline on a card" width="46%">
+  &nbsp;&nbsp;
+  <img src="assets/screenshot-popup.png" alt="showShareMenu() shown as a long-press popup" width="46%">
+</p>
+
 ## Features
 
 - `ShareButtonsRow` — an inline row of channel buttons.
