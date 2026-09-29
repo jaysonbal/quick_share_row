@@ -1,3 +1,13 @@
+## 0.1.2
+
+- Fixed the pub.dev screenshots (`assets/screenshot-row.png`,
+  `assets/screenshot-popup.png`): the previous versions were hard-clipped
+  partway down the phone mockup (a render-viewport bug during image
+  generation, not a code issue) and had a faint grey halo around the
+  rounded corners instead of true transparency. Both now render the full
+  phone with a shadow that fades cleanly to transparent on any background.
+- No code changes in this release - assets/metadata only.
+
 ## 0.1.1
 
 - Fixed `deprecated_member_use`: `ShareUtils.toSystem()` now calls
