@@ -10,7 +10,11 @@
     bounds" check resolves the floor version exactly and caught that those
     identifiers don't exist there (`flutter pub downgrade` + `analyze`
     reproduces it).
+
+## 0.1.3
+
 - Added the hero banner image to the top of `README.md`.
+- No code changes in this release - assets/metadata only.
 
 ## 0.1.2
 
