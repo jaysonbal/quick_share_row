@@ -1,5 +1,9 @@
 # quick_share_row
 
+<p align="center">
+  <img src="assets/hero.png" alt="quick_share_row - a ready-made row of per-channel share icons for Flutter">
+</p>
+
 A ready-made row of per-channel share icons — WhatsApp, SMS, Facebook,
 Email, and the system share sheet — plus a long-press popup variant, so
 you don't have to hand-wire `url_launcher` deep links every time a screen

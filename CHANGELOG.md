@@ -1,3 +1,8 @@
+## 0.1.3
+
+- Added marketing hero image to the README.md
+- No code changes in this release - assets/metadata only.
+
 ## 0.1.2
 
 - Fixed the pub.dev screenshots (`assets/screenshot-row.png`,
