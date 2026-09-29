@@ -1,4 +1,4 @@
-## 0.1.3
+## 0.1.4
 
 - Fixed pub.dev score issues:
   - Shortened `pubspec.yaml`'s `description` to 137 characters (was several

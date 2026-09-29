@@ -2,7 +2,7 @@ name: quick_share_row
 description: >-
   Ready-made per-channel share row (WhatsApp, SMS, Facebook, Email, system
   sheet) plus a long-press popup for Flutter, no deep-link wiring.
-version: 0.1.3
+version: 0.1.4
 homepage: https://www.azarrapps.com/our-products/quick-share-row
 repository: https://github.com/jaysonbal/quick_share_row
 
