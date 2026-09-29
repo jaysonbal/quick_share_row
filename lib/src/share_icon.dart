@@ -1,4 +1,5 @@
-import 'package:flutter/foundation.dart' show defaultTargetPlatform, TargetPlatform;
+import 'package:flutter/foundation.dart'
+    show defaultTargetPlatform, TargetPlatform;
 import 'package:flutter/material.dart';
 
 import 'share_channel.dart';
@@ -43,7 +44,11 @@ class ShareIcon extends StatelessWidget {
               shape: BoxShape.circle,
             ),
             child: channel.customChild ??
-                Icon(icon, color: Colors.white, size: size * 0.5),
+                Icon(
+                  icon,
+                  color: Colors.white,
+                  size: size * 0.5,
+                ),
           ),
         ),
       ),
