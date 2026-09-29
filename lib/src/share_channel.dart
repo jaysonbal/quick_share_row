@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 /// Which sharing mechanism a [ShareChannel] triggers. Kept separate from
 /// [ShareChannel] itself so [ShareUtils.share] can switch on it without

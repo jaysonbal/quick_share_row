@@ -1,5 +1,6 @@
 /// A ready-made row of per-channel share icons (WhatsApp, SMS, Facebook,
 /// Email, system share), plus a long-press popup variant.
+// ignore: unnecessary_library_name
 library quick_share_row;
 
 export 'src/share_buttons_row.dart';

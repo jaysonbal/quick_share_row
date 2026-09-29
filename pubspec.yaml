@@ -6,25 +6,17 @@ description: >
   UI. Extracted from a production Flutter app's reviews and booking
   screens and generalized for any message/URL.
 version: 0.1.0
-homepage: https://azarrapps.com
-# repository: https://github.com/<your-github-org>/quick_share_row
-# Add this once the package has a real repo - pub.dev's scoring rewards
-# having one, but an invented URL would be worse than none at all.
+homepage: https://www.azarrapps.com/our-products/quick-share-row
+repository: https://github.com/jaysonbal/quick_share_row
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
   flutter: '>=3.10.0'
 
-# NOTE ON VERSION CONSTRAINTS: this sandbox has no network path to
-# pub.dev (only npm/PyPI/crates/Go module registries are reachable), so
-# these floors are deliberately conservative rather than pinned to
-# "current" - I can't confirm current from here. Run `flutter pub get`
-# once, then `flutter pub outdated` and tighten these to match what
-# actually resolves before publishing.
 dependencies:
   flutter:
     sdk: flutter
-  share_plus: '>=7.0.0 <12.0.0'
+  share_plus: '>=10.0.0 <12.0.0'
   url_launcher: '>=6.1.0 <7.0.0'
 
 dev_dependencies:

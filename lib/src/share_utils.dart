@@ -61,6 +61,10 @@ class ShareUtils {
   /// The platform's own share sheet, via `share_plus`.
   /// [sharePositionOrigin] is passed straight through - required by
   /// `share_plus` on iPad so the popover has somewhere to anchor from.
+  ///
+  /// Uses the `SharePlus.instance.share(ShareParams(...))` API (share_plus
+  /// 10+) rather than the older static `Share.share(...)`, which that
+  /// package has since deprecated.
   static Future<void> toSystem(
     String message, {
     String? subject,
@@ -68,10 +72,12 @@ class ShareUtils {
     void Function(Object error)? onError,
   }) async {
     try {
-      await Share.share(
-        message,
-        subject: subject,
-        sharePositionOrigin: sharePositionOrigin,
+      await SharePlus.instance.share(
+        ShareParams(
+          text: message,
+          subject: subject,
+          sharePositionOrigin: sharePositionOrigin,
+        ),
       );
     } catch (e) {
       onError?.call(e);
