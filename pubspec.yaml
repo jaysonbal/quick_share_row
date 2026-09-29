@@ -1,10 +1,7 @@
 name: quick_share_row
-description: >
-  A ready-made row of per-channel share icons (WhatsApp, SMS, Facebook,
-  Email, system share) plus a long-press popup variant, so you don't have
-  to hand-wire url_launcher deep links every time a screen needs a share
-  UI. Extracted from a production Flutter app's reviews and booking
-  screens and generalized for any message/URL.
+description: >-
+  Ready-made per-channel share row (WhatsApp, SMS, Facebook, Email, system
+  sheet) plus a long-press popup for Flutter, no deep-link wiring.
 version: 0.1.3
 homepage: https://www.azarrapps.com/our-products/quick-share-row
 repository: https://github.com/jaysonbal/quick_share_row
@@ -22,22 +19,20 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
   flutter: '>=3.10.0'
 
-# NOTE ON VERSION CONSTRAINTS: this sandbox has no network path to
-# pub.dev (only npm/PyPI/crates/Go module registries are reachable), so
-# these floors are deliberately conservative rather than pinned to
-# "current" - I can't confirm current from here. Run `flutter pub get`
-# once, then `flutter pub outdated` and tighten these to match what
-# actually resolves before publishing.
+# share_plus floor verified against its own changelog: SharePlus.instance /
+# ShareParams (used in lib/src/share_utils.dart) were introduced in 11.0.0,
+# not 10.0.0 - pub.dev's lower-bound downgrade check caught that a 10.0.0
+# floor was wrong (those identifiers don't exist at exactly 10.0.0).
 dependencies:
   flutter:
     sdk: flutter
-  share_plus: '>=10.0.0 <12.0.0'
+  share_plus: ^13.3.0
   url_launcher: '>=6.1.0 <7.0.0'
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: '>=3.0.0 <6.0.0'
+  flutter_lints: ^6.0.0
 
 flutter:
   # No assets/fonts of its own - every icon is a Material IconData or a

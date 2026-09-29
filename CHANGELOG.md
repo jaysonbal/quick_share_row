@@ -1,7 +1,16 @@
 ## 0.1.3
 
-- Added marketing hero image to the README.md
-- No code changes in this release - assets/metadata only.
+- Fixed pub.dev score issues:
+  - Shortened `pubspec.yaml`'s `description` to 137 characters (was several
+    hundred) - pub.dev only indexes/displays the first 60-180.
+  - Corrected the `share_plus` lower bound to `>=11.0.0 <12.0.0`. The
+    previous `>=10.0.0` floor was wrong: `SharePlus.instance`/`ShareParams`
+    (used in `toSystem()`) were actually introduced in share_plus 11.0.0,
+    not 10.0.0 - pub.dev's "compatible with dependency constraint lower
+    bounds" check resolves the floor version exactly and caught that those
+    identifiers don't exist there (`flutter pub downgrade` + `analyze`
+    reproduces it).
+- Added the hero banner image to the top of `README.md`.
 
 ## 0.1.2
 
