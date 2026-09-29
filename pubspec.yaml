@@ -5,7 +5,7 @@ description: >
   to hand-wire url_launcher deep links every time a screen needs a share
   UI. Extracted from a production Flutter app's reviews and booking
   screens and generalized for any message/URL.
-version: 0.1.0
+version: 0.1.1
 homepage: https://www.azarrapps.com/our-products/quick-share-row
 repository: https://github.com/jaysonbal/quick_share_row
 
