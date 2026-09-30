@@ -90,7 +90,7 @@ class ShareChannel {
   static const system = ShareChannel(
     type: ShareChannelType.system,
     label: 'More',
-    icon: Icons.share,
+    icon:  Icons.share,
     color: Color(0xFF6B7280),
   );
 

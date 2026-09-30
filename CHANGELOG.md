@@ -1,3 +1,7 @@
+## 0.1.7
+
+- Hero banner image redesigned
+
 ## 0.1.6
 
 - Added an optional `iconColor` parameter to `ShareButtonsRow` and
