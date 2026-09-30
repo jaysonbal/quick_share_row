@@ -1,4 +1,20 @@
+## 0.1.5
+
+- Widened the `share_plus` upper bound to `>=11.0.0 <13.0.0` (was
+  `<12.0.0`). share_plus 12.0.0's breaking changes were Android/Gradle
+  build-tooling minimums (AGP, Gradle, Kotlin versions), not an API change,
+  so there was no reason to block apps that already depend on
+  `share_plus: ^12.0.1` or similar from adding this package.
+
 ## 0.1.4
+
+- Widened the `share_plus` upper bound to `>=11.0.0 <13.0.0` (was
+  `<12.0.0`). share_plus 12.0.0's breaking changes were Android/Gradle
+  build-tooling minimums (AGP, Gradle, Kotlin versions), not an API change,
+  so there was no reason to block apps that already depend on
+  `share_plus: ^12.0.1` or similar from adding this package.
+
+## 0.1.3
 
 - Fixed pub.dev score issues:
   - Shortened `pubspec.yaml`'s `description` to 137 characters (was several
@@ -10,11 +26,7 @@
     bounds" check resolves the floor version exactly and caught that those
     identifiers don't exist there (`flutter pub downgrade` + `analyze`
     reproduces it).
-
-## 0.1.3
-
 - Added the hero banner image to the top of `README.md`.
-- No code changes in this release - assets/metadata only.
 
 ## 0.1.2
 
