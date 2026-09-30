@@ -11,6 +11,11 @@ class ShareIcon extends StatelessWidget {
   final ShareChannel channel;
   final VoidCallback onTap;
   final double size;
+
+  /// Tints the glyph (white by default) - ignored when [channel] has a
+  /// [ShareChannel.customChild], and separate from [channel]'s own [color]
+  /// property, which is this button's circular background.
+  final Color color;
   final EdgeInsetsGeometry padding;
 
   const ShareIcon({
@@ -18,6 +23,7 @@ class ShareIcon extends StatelessWidget {
     required this.channel,
     required this.onTap,
     this.size = 40,
+    this.color = const Color(0xFFFFFFFF),
     this.padding = const EdgeInsets.only(right: 15),
   });
 
@@ -46,7 +52,7 @@ class ShareIcon extends StatelessWidget {
             child: channel.customChild ??
                 Icon(
                   icon,
-                  color: Colors.white,
+                  color: color,
                   size: size * 0.5,
                 ),
           ),

@@ -38,6 +38,13 @@ class ShareButtonsRow extends StatelessWidget {
 
   final EdgeInsetsGeometry padding;
   final double iconSize;
+
+  /// Tints every channel's glyph (white by default). Has no effect on a
+  /// channel using [ShareChannel.customChild], and is separate from
+  /// [ShareChannel.color], which is the icon's circular background - use
+  /// that (via `copyWith`) to change one channel's color, and this to
+  /// change every glyph's tint at once.
+  final Color iconColor;
   final MainAxisAlignment mainAxisAlignment;
 
   /// Called when a specific channel fails to launch (app not installed,
@@ -52,6 +59,7 @@ class ShareButtonsRow extends StatelessWidget {
     this.channels = ShareChannel.defaults,
     this.padding = EdgeInsets.zero,
     this.iconSize = 40,
+    this.iconColor = const Color(0xFFFFFFFF),
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.onError,
   });
@@ -68,6 +76,7 @@ class ShareButtonsRow extends StatelessWidget {
             ShareIcon(
               channel: channel,
               size: iconSize,
+              color: iconColor,
               onTap: () => ShareUtils.share(
                 channel: channel.type,
                 message: message,

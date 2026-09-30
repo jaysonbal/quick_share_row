@@ -1,10 +1,21 @@
+## 0.1.6
+
+- Added an optional `iconColor` parameter to `ShareButtonsRow` and
+  `showShareMenu()` (and the underlying `ShareIcon.color`, default white)
+  to tint every channel's glyph at once - separate from
+  `ShareChannel.color`, which is each icon's circular background, and
+  ignored on a channel using `ShareChannel.customChild` (an SVG/asset
+  brings its own coloring).
+
 ## 0.1.5
 
-- Widened the `share_plus` upper bound to `>=11.0.0 <13.0.0` (was
-  `<12.0.0`). share_plus 12.0.0's breaking changes were Android/Gradle
-  build-tooling minimums (AGP, Gradle, Kotlin versions), not an API change,
-  so there was no reason to block apps that already depend on
-  `share_plus: ^12.0.1` or similar from adding this package.
+- Widened the `share_plus` upper bound further, to `>=11.0.0 <14.0.0`
+  (0.1.4 had widened it to `<13.0.0`). Checked share_plus's own changelog
+  again: neither 12.0.0 nor 13.0.0 changed the `Share`/`SharePlus`/
+  `ShareParams` API - both were breaking-change releases for build tooling
+  only (Android Gradle/Kotlin minimums, win32, Flutter/Dart SDK floors) -
+  so there's no reason to block a consuming app on share_plus 12.x or
+  13.x either.
 
 ## 0.1.4
 

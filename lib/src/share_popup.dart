@@ -11,6 +11,10 @@ import 'share_channel.dart';
 /// The popup carries no `PopupMenuItem` value of its own, so tapping a
 /// channel icon both shares AND closes the menu in one tap, without a
 /// second, separate "confirm" step.
+///
+/// [iconColor] tints each channel's glyph (white by default) - it has no
+/// effect on a channel using [ShareChannel.customChild], and is separate
+/// from [ShareChannel.color], which is the icon's circular background.
 Future<void> showShareMenu(
   BuildContext context,
   Offset position, {
@@ -19,6 +23,7 @@ Future<void> showShareMenu(
   String? subject,
   List<ShareChannel> channels = ShareChannel.defaults,
   double iconSize = 40,
+  Color iconColor = const Color(0xFFFFFFFF),
   Color backgroundColor = Colors.white,
   void Function(Object error)? onError,
 }) {
@@ -45,6 +50,7 @@ Future<void> showShareMenu(
             subject: subject,
             channels: channels,
             iconSize: iconSize,
+            iconColor: iconColor,
             mainAxisAlignment: MainAxisAlignment.center,
             onError: onError,
           ),

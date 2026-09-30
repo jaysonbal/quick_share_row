@@ -2,7 +2,7 @@ name: quick_share_row
 description: >-
   Ready-made per-channel share row (WhatsApp, SMS, Facebook, Email, system
   sheet) plus a long-press popup for Flutter, no deep-link wiring.
-version: 0.1.5
+version: 0.1.6
 homepage: https://www.azarrapps.com/our-products/quick-share-row
 repository: https://github.com/jaysonbal/quick_share_row
 
@@ -23,10 +23,11 @@ environment:
 # ShareParams (used in lib/src/share_utils.dart) were introduced in 11.0.0,
 # not 10.0.0 - pub.dev's lower-bound downgrade check caught that a 10.0.0
 # floor was wrong (those identifiers don't exist at exactly 10.0.0). Upper
-# bound widened to <13.0.0 in 0.1.4: share_plus 12.0.0's breaking changes
-# were Android/Gradle build-tooling only (AGP/Gradle/Kotlin minimums), not
-# an API change, so consuming apps already on share_plus ^12.0.1 aren't
-# blocked from depending on this package.
+# bound widened to <14.0.0 in 0.1.5: neither share_plus 12.0.0 nor 13.0.0
+# changed the Share/SharePlus/ShareParams API - both were breaking-change
+# releases for build tooling only (Android Gradle/Kotlin minimums, win32,
+# Flutter/Dart SDK floors), so there's no reason to block a consuming app
+# on any of share_plus 11.x/12.x/13.x.
 dependencies:
   flutter:
     sdk: flutter
